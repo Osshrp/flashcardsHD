@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
       else
         @card = current_user.cards.pending.first
         @card ||= current_user.cards.repeating.first
-      end
     end
 
     respond_to do |format|
