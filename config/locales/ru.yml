@@ -16,6 +16,7 @@ ru:
   check_card_button: 'Проверить'
   no_review_card_text: 'Вы изучили все доступные карточки.
       Ожидайте наступления даты пересмотра.'
+  review_date_came_notice: 'Наступила дата пересмотра'
   local_label: 'Локаль'
   select_local_label: 'Выберите локаль'
   registration_label: 'Регистрация'
@@ -37,6 +38,8 @@ ru:
   delete_user_label: 'Удалить пользователя'
   log_out_label: 'Выйти'
   user_created_successfully_notice: 'Пользователь успешно создан.'
+  user_deleted_successfully_notice: 'Пользователь успешно удален'
+  user_updated_successfully_notice: 'Профиль пользователя успешно обновлен'
   please_log_in_alert: 'Пожалуйста авторизуйтесь.'
   not_found_alert: 'Вы обратились к несуществующей записи.'
   log_in_is_successful_notice: 'Вход выполнен успешно.'
@@ -52,9 +55,30 @@ ru:
   log_out_is_successful_notice: 'Выход выполнен успешно.'
   log_out_failed_provider_alert: "Вход из аккаунта %{provider.titleize} не выполнен ."
   please_log_in: 'Пожалуйста авторизуйтесь.'
+  go_to_site: 'Перейти на сайт для просмотра карточек'
 
   activerecord:
     errors:
+      models:
+        block:
+          attributes:
+            title:
+              blank: 'Это поле дожно быть заполнено'
+        card:
+          attributes:
+            original_text:
+              blank: 'Это поле дожно быть заполнено'
+              texts_are_not_equal_notice: 'Вводимые значения должны отличаться.'
+            translated_text:
+              blank: 'Это поле дожно быть заполнено'
+            user_id:
+              blank: 'Ошибка ассоциации'
+            block_id:
+              blank: 'Выберите колоду из выпадающего списка'
+        user:
+          local:
+            inclusion: 'Выберите локаль из выпадающего списка.'
+
       messages:
         blank: 'Заполните поле.'
         too_short: 'Короткое значение.'

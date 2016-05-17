@@ -16,6 +16,7 @@ en:
   check_card_button: 'Check'
   no_review_card_text: 'You have studied all available cards.
       Expect the date of revision.'
+  review_date_came_notice: 'It came date to review cards'
   local_label: 'Local'
   select_local_label: 'Select local'
   registration_label: 'Registration'
@@ -37,6 +38,8 @@ en:
   delete_user_label: 'Delete user'
   log_out_label: 'Log out'
   user_created_successfully_notice: 'User created successfully.'
+  user_deleted_successfully_notice: 'User deleted successfully'
+  user_updated_successfully_notice: 'User profile updated successfully'
   please_log_in_alert: 'Please log in.'
   not_found_alert: 'You have turned to a non-existent record.'
   log_in_is_successful_notice: 'Login is successful.'
@@ -52,9 +55,29 @@ en:
   log_out_is_successful_notice: 'Log out is successful.'
   log_out_failed_provider_alert: "Log out of your account %{provider} failed."
   please_log_in: 'Please log in.'
+  go_to_site: 'Go to site to view cards'
 
   activerecord:
       errors:
+        models:
+        block:
+          attributes:
+            title:
+              blank: 'cannot be empty'
+        card:
+          attributes:
+            original_text:
+              blank: 'cannot be empty'
+              texts_are_not_equal_notice: 'Values must be different'
+            translated_text:
+              blank: 'cannot be empty'
+            user_id:
+              blank: 'Association error'
+            block_id:
+              blank: 'Select deck form drop-down list'
+        user:
+          local:
+            inclusion: 'Select local from drop-down list'
         messages:
           blank: 'Fill out the field.'
           too_short: 'Short value.'
