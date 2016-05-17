@@ -116,7 +116,7 @@ GEM
     mimemagic (0.3.1)
     mini_magick (4.5.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     multi_json (1.12.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -247,7 +247,7 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri
   pg
-  rails (~> 4.2.5)
+  rails (= 4.2.6)
   rails_12factor
   rake
   responders (~> 2.0)
@@ -263,7 +263,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 2.1.4p265
+   ruby 2.3.0p0
 
 BUNDLED WITH
    1.12.3
