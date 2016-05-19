@@ -2,6 +2,24 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
+  def find_card(id)
+    if id
+      @card = current_user.cards.find id
+    elsif
+      current_user.current_block
+      @card = current_user.current_block.cards.pending.first
+      @card ||= current_user.current_block.cards.repeating.first
+    else
+        @card = current_user.cards.pending.first
+        @card ||= current_user.cards.repeating.first
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
 
   def set_locale

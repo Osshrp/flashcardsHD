@@ -2,10 +2,23 @@ en:
   welcome: 'Welcome.'
   original_text_label: 'Original'
   translated_text_label: 'Translation'
+  review_date: 'Review'
+  image_label: 'Image'
+  delete_image: 'Delete image'
+  decks_label: 'Decks'
+  select_deck: 'Select a deck'
+  edit: 'Edit'
+  delete: 'Delete'
+  save: 'Save'
   current_card_label: 'Current card'
+  make_current_label: 'Make current'
+  make_ordinary_label: 'Make ordinary'
   check_card_button: 'Check'
   no_review_card_text: 'You have studied all available cards.
       Expect the date of revision.'
+  review_date_came_notice: 'It came date to review cards'
+  local_label: 'Local'
+  select_local_label: 'Select local'
   registration_label: 'Registration'
   email_label: 'E-mail'
   password_label: 'Password'
@@ -15,12 +28,18 @@ en:
   sing_in_label: 'Sing in'
   all_decks_label: 'All deck'
   add_deck_label: 'Add deck'
+  deck_name_label: 'Name'
   all_cards_label: 'All cards'
   add_card_label: 'Add card'
+  delete_deck_confirmation_label: 'Delete deck?'
+  edit_card_label: 'Edit card'
   user_profile_label: 'User profile'
+  profile_label: 'Profile'
   delete_user_label: 'Delete user'
   log_out_label: 'Log out'
   user_created_successfully_notice: 'User created successfully.'
+  user_deleted_successfully_notice: 'User deleted successfully'
+  user_updated_successfully_notice: 'User profile updated successfully'
   please_log_in_alert: 'Please log in.'
   not_found_alert: 'You have turned to a non-existent record.'
   log_in_is_successful_notice: 'Login is successful.'
@@ -36,9 +55,29 @@ en:
   log_out_is_successful_notice: 'Log out is successful.'
   log_out_failed_provider_alert: "Log out of your account %{provider} failed."
   please_log_in: 'Please log in.'
+  go_to_site: 'Go to site to view cards'
 
   activerecord:
       errors:
+        models:
+        block:
+          attributes:
+            title:
+              blank: 'cannot be empty'
+        card:
+          attributes:
+            original_text:
+              blank: 'cannot be empty'
+              texts_are_not_equal_notice: 'Values must be different'
+            translated_text:
+              blank: 'cannot be empty'
+            user_id:
+              blank: 'Association error'
+            block_id:
+              blank: 'Select deck form drop-down list'
+        user:
+          local:
+            inclusion: 'Select local from drop-down list'
         messages:
           blank: 'Fill out the field.'
           too_short: 'Short value.'
