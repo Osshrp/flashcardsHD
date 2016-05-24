@@ -13,7 +13,8 @@ ActiveAdmin.register User do
 #   permitted
 # end
 	
-  permit_params :email, roles: [:id, :name, :resource_type]
+  permit_params :email, :password, :password_confirmation, 
+    roles: [:id, :name, :resource_type]
 
   index do
     id_column
@@ -24,15 +25,14 @@ ActiveAdmin.register User do
     actions
   end
 
-  # form do |f|
-  #   f.inputs do
-  #   #   f.has_many :roles do |r|
-  #   #     r.input :name
-  #   #   end
-  #   end
-  #   f.input 'Email', :email
-  #   f.actions
-  # end
+  form do |f|
+    f.inputs "User details" do
+      f.input :email
+      f.input :password
+      f.input :password_confirmation
+    end
+    f.actions
+  end
 
 end
 
