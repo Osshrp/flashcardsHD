@@ -20,7 +20,7 @@ ActiveAdmin.register User do
     id_column
     column :email
     column :roles do |user|
-      user.roles.first.name if user.roles.first
+      user.roles.map { |role| role.name }
     end
     actions
   end
