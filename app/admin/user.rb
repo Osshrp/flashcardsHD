@@ -13,14 +13,14 @@ ActiveAdmin.register User do
 #   permitted
 # end
 	
-  permit_params :email, :password, :password_confirmation, 
-    roles: [:id, :name, :resource_type]
+  permit_params :email, :password, :password_confirmation, local_ids: [], 
+    role_ids: []
 
   index do
     id_column
     column :email
     column :roles do |user|
-      user.roles.map { |role| role.name }
+      user.roles.map(&:name)
     end
     actions
   end
@@ -30,6 +30,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :roles, :as => :select, :collection => Role.all
     end
     f.actions
   end
