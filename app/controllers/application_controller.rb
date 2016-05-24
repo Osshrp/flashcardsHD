@@ -20,6 +20,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin_logout
+    logout
+  end
+
   private
 
   def set_locale

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :user_sessions, only: :destroy
     resources :users, only: :destroy
     post 'logout' => 'user_sessions#destroy', :as => :logout
+    get 'logout' => 'user_sessions#destroy'
 
     resources :cards
 

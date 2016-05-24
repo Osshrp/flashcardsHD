@@ -9,7 +9,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -58,7 +58,6 @@ ActiveAdmin.setup do |config|
 
   def authenticate_admin_user!
     unless current_user.has_role? :admin
-      flash.now[:alert] = "Unauthorized Access!"
       redirect_to new_user_session_path 
     end
   end
@@ -107,7 +106,8 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   #config.logout_link_path = :destroy_admin_user_session_path
-  config.logout_link_path = :destroy_user_session_path
+  #config.logout_link_path = :destroy_user_session_path
+  config.logout_link_path = :logout_path
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
