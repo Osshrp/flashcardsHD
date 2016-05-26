@@ -2,11 +2,11 @@ class RolePolicy < ApplicationPolicy
 
 
   def index?
-    user.has_role? :admin
+    admin?
   end
 
   def create?
-    user.has_role? :admin
+    admin?
   end
 
   def new?
@@ -14,7 +14,7 @@ class RolePolicy < ApplicationPolicy
   end
 
   def update?
-    user.has_role? :admin
+    admin?
   end
 
   def edit?
@@ -22,7 +22,7 @@ class RolePolicy < ApplicationPolicy
   end
 
 	def destroy?
-    user.has_role? :admin
+    admin?
   end
 
 end
