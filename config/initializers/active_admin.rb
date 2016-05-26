@@ -60,7 +60,7 @@ ActiveAdmin.setup do |config|
 
   def authenticate_admin_user!
     unless current_user.has_role? :admin
-      redirect_to new_user_session_path 
+      redirect_to new_user_session_path
     end
   end
 
@@ -109,8 +109,8 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  #config.logout_link_path = :destroy_admin_user_session_path
-  #config.logout_link_path = :destroy_user_session_path
+  # config.logout_link_path = :destroy_admin_user_session_path
+  # config.logout_link_path = :destroy_user_session_path
   config.logout_link_path = :logout_path
 
   # This setting changes the http method used when rendering the

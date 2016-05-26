@@ -86,6 +86,3 @@ ru:
         taken: 'Не уникальное значение.'
         invalid: 'Не верный формат.'
 
-time:
-  formats:
-    long: "%Y-%m-%d %H:%M:%S"
