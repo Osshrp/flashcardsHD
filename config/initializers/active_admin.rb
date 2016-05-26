@@ -1,4 +1,6 @@
 ActiveAdmin.setup do |config|
+
+  config.before_filter :set_admin_locale
   # == Site Title
   #
   # Set the title that is displayed on the main layout

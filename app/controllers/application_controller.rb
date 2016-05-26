@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
     logout
   end
 
+  def set_admin_locale
+    I18n.locale = :en
+  end
+
   private
 
   def set_locale
