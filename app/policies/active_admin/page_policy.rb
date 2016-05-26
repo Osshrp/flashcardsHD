@@ -6,10 +6,10 @@ class ActiveAdmin::PagePolicy < ApplicationPolicy
   end
 
   def index?
-    false
+    user.has_role? :admin
   end
 
   def show?
-    false
+    user.has_role? :admin
   end
 end

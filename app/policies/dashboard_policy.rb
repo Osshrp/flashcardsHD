@@ -1,10 +1,10 @@
 class DashboardPolicy < ApplicationPolicy
 
   def dashboard?
-    false
+    user.has_role? :admin
   end
 
   def index?
-    false
+    user.has_role? :admin
   end
 end

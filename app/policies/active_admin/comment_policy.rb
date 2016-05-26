@@ -7,16 +7,15 @@ class ActiveAdmin::CommentPolicy < ApplicationPolicy
 
 
   def index?
-    #user.has_role? :admin2
-    false
+    user.has_role? :admin
   end
 
   def show
-    false
+    user.has_role? :admin
   end
 
   def create?
-    user.has_role? :admin2
+    user.has_role? :admin
   end
 
   def new?
@@ -24,7 +23,7 @@ class ActiveAdmin::CommentPolicy < ApplicationPolicy
   end
 
   def update?
-    user.has_role? :admin2
+    user.has_role? :admin
   end
 
   def edit?
@@ -32,8 +31,7 @@ class ActiveAdmin::CommentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.has_role? :admin2
+    user.has_role? :admin
   end
 
-  end
 end
