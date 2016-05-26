@@ -24,7 +24,7 @@ doc.xpath('//table/tbody/tr').each do |row|
   translated = row.search('td[4]')[0].content.downcase
   card = Card.new(original_text: original,
   	              translated_text: translated,
-                  user.id, block.id)
+                  user_id: user.id, block_id: block.id)
   card.save
 end
 
