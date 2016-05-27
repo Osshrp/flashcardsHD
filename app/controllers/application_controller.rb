@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   protect_from_forgery with: :exception
   before_action :set_locale
 
@@ -18,6 +19,14 @@ class ApplicationController < ActionController::Base
       format.html
       format.js
     end
+  end
+
+  def admin_logout
+    logout
+  end
+
+  def set_admin_locale
+    I18n.locale = :en
   end
 
   private
