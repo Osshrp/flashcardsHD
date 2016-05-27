@@ -2958,8 +2958,7 @@ select[multiple].form-group-lg .form-control {
   margin-top: 0;
   margin-bottom: 0;
 }
-.form-horizontal .radio,
-.form-horizontal .checkbox {
+.form-horizontal .radio,.form-horizontal .checkbox {
   min-height: 27px;
 }
 .form-horizontal .form-group {
@@ -6581,4 +6580,3 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
