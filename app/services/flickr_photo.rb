@@ -1,17 +1,17 @@
 class FlickrPhoto
-  def initialize(search_string)
-    @search_string = search_string
-  end
 
-  def flickr_photos(photo_count = 10)
-    flickr = Flickr.new('config/flickr.yml')
-    flickr.photos.search(tags: @search_string).values_at(0..(photo_count - 1))
-  end
-  
-  def render_flickr_widget(photo_count = 10)
-    flickr_photos(photo_count).in_groups_of(2)
+  def self.render(search_string, photo_count = 10)
+    photos(search_string, photo_count).in_groups_of(2)
     
     # rescue Exception
     #   render :partial => '/cards/unavailable'
+  end
+
+  private
+
+  def self.photos(search_string, photo_count = 10)
+    init_hash = {:key => ENV['FLICKR_KEY'], :secret => ENV['FLICKR_SECRET']}
+    flickr = Flickr.new(init_hash)
+    flickr.photos.search(tags: search_string, per_page: photo_count)
   end
 end

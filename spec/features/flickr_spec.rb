@@ -3,21 +3,19 @@ require "support/helpers/login_helper.rb"
 include LoginHelper
 # require 'pry'
 require 'vcr'
+require 'pp'
 
 describe "seaching photos in Flickr", vcr: true do
+  let!(:user) { create :user_with_one_block_without_cards }
+  let!(:card) { Card.create original_text: "house", translated_text: "дом",
+               user_id: user.id, block_id: user.blocks.first.id }
   before do
-    user = create :user_with_one_block_without_cards
-    @card = Card.create original_text: "house", translated_text: "дом",
-                        user_id: user.id, block_id: user.blocks.first.id
-
     visit root_path
-
     login "test@test.com", "12345", "Войти"
-    visit edit_card_path @card
+    visit edit_card_path card
   end
 
   it "edit card searching and connecting photos from Flickr" do
-    
     click_link 'Загрузить фото с Flickr'
     fill_in "card_photo_search_string", with: "house"
 

@@ -1,5 +1,2 @@
-<% photo = FlickrPhoto.new params[:card][:photo][:search_string] %>
 <%= render partial: '/dashboard/cards/flickr_widget',
-locals: { photos: photo.render_flickr_widget } %>
-
-
+locals: { photos: FlickrPhoto.render(params[:card][:photo][:search_string]) } %>

@@ -16,9 +16,7 @@ class Dashboard::CardsController < Dashboard::BaseController
   def create
     @card = current_user.cards.build(card_params)
     if @card.save
-      card = Card.find_by original_text: params[:card][:original_text]
-      card.remote_image_url = params[:card][:remote_image_url]
-      card.save
+      @card.update(card_params.except!(:id))
       redirect_to cards_path
     else
       respond_with @card
@@ -26,7 +24,6 @@ class Dashboard::CardsController < Dashboard::BaseController
   end
 
   def update
-    @card.remote_image_url ||= params[:remote_image_url]
     if @card.update(card_params)
       redirect_to cards_path
     else
