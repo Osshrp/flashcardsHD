@@ -6,5 +6,5 @@
 # For example, setting:
 # GMAIL_USERNAME: 'Your_Gmail_Username'
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
-FLICKR_KEY: 'test'
-FLICKR_SECRET: 'test'
+FLICKR_KEY: "11111111111111111111111111111111"
+FLICKR_SECRET: "1111111111111111"

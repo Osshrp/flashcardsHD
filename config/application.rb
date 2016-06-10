@@ -25,11 +25,15 @@ module Flashcards
     config.active_record.raise_in_transactional_callbacks = true
 
     if Rails.env.test?
-      config do
+      config.before_configuration do
         env_file = File.join(Rails.root, 'config', 'local_env.yml')
         YAML.load(File.open(env_file)).each do |key, value|
           ENV[key.to_s] = value
         end if File.exist?(env_file)
+      end
+      VCR.configure do |config|
+        config.cassette_library_dir = "spec/cassettes"
+        config.hook_into :webmock
       end
     end
   end

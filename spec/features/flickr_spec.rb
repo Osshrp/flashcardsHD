@@ -19,7 +19,7 @@ describe "seaching photos in Flickr", vcr: true do
     click_link 'Загрузить фото с Flickr'
     fill_in "card_photo_search_string", with: "house"
 
-    VCR.use_cassette 'flickr'  do
+    VCR.use_cassette 'flickr', :match_requests_on => [:host]  do
       click_button "Искать фото"
     end
     expect(page).to have_xpath "//li/a/img"
@@ -40,7 +40,7 @@ describe "create card with Flickr photos connected" do
     click_link 'Загрузить фото с Flickr'
     fill_in "card_photo_search_string", with: "house"
 
-    VCR.use_cassette 'flickr' do
+    VCR.use_cassette 'flickr', :match_requests_on => [:host] do
       click_button "Искать фото"
     end
     expect(page).to have_xpath "//li/a/img"
