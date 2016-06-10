@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     get 'logout' => 'user_sessions#destroy'
 
     resources :cards
-    match 'search-photo', to: 'cards#search_photo', via: [:get, :patch, :post]
+    match 'search-photo', to: 'cards#search_photo', via: [:post, :patch]
 
     resources :blocks do
       member do

@@ -1,5 +1,5 @@
 class Dashboard::CardsController < Dashboard::BaseController
-  before_action :set_card, only: [:destroy, :edit, :update ]
+  before_action :set_card, only: [:destroy, :edit, :update]
   respond_to :html, :json
 
   def index

@@ -16,7 +16,7 @@
     <%= f.input :id, as: :hidden %>
   </div>
 
-  <%= f.simple_fields_for :photo, :method => 'patch' do |photo_form| %>
+  <%= f.simple_fields_for :photo do |photo_form| %>
     <div class="form-group">
       <%= link_to 'Загрузить фото с Flickr', '#',
         class: 'btn btn-default', id: 'show_div' %>
