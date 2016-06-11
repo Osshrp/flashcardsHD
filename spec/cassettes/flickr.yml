@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Jun 2016 16:41:38 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1049'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Robots-Tag:
+      - noindex
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www303.flickr.bf1.yahoo.com
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '2'
+      Via:
+      - http/1.1 fts101.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        r19.ycpi.dea.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAAAIHfMTP8QnWwAAAAAAAAAAbEKUjuISUvoAAAAAAAAAAAAFNO82ZT59AAU07zZ1XPYDycfKAAAAAA--
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n<photos
+        page=\"1\" pages=\"29258\" perpage=\"10\" total=\"292576\">\n\t<photo id=\"27549368896\"
+        owner=\"92976505@N08\" secret=\"4cdb56d32e\" server=\"7417\" farm=\"8\" title=\"Rogers
+        Park\" ispublic=\"1\" isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576717\"
+        lastupdate=\"1465576718\" datetaken=\"2016-05-22 15:43:42\" datetakengranularity=\"0\"
+        datetakenunknown=\"0\" ownername=\"BalineseCat\" iconserver=\"8374\" iconfarm=\"9\"
+        views=\"0\" tags=\"park house castle painted fairy leopard rogers plaid estes
+        burberry\" machine_tags=\"\" latitude=\"0\" longitude=\"0\" accuracy=\"0\"
+        context=\"0\" media=\"photo\" media_status=\"ready\" />\n\t<photo id=\"27306455100\"
+        owner=\"63360666@N04\" secret=\"3b90fe9013\" server=\"7507\" farm=\"8\" title=\"\"
+        ispublic=\"1\" isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576216\"
+        lastupdate=\"1465576223\" datetaken=\"2013-11-07 02:21:41\" datetakengranularity=\"0\"
+        datetakenunknown=\"0\" ownername=\"farenough\" iconserver=\"8442\" iconfarm=\"9\"
+        views=\"0\" tags=\"old house history abandoned home church rural photo florida
+        decay explore forgotten fl wander rurex\" machine_tags=\"\" latitude=\"0\"
+        longitude=\"0\" accuracy=\"0\" context=\"0\" media=\"photo\" media_status=\"ready\"
+        />\n\t<photo id=\"26973637514\" owner=\"63360666@N04\" secret=\"c7176be6f0\"
+        server=\"7320\" farm=\"8\" title=\"\" ispublic=\"1\" isfriend=\"0\" isfamily=\"0\"
+        license=\"0\" dateupload=\"1465576217\" lastupdate=\"1465576223\" datetaken=\"2013-11-07
+        02:21:51\" datetakengranularity=\"0\" datetakenunknown=\"0\" ownername=\"farenough\"
+        iconserver=\"8442\" iconfarm=\"9\" views=\"0\" tags=\"old house history abandoned
+        home church rural photo florida decay explore forgotten fl wander rurex\"
+        machine_tags=\"\" latitude=\"0\" longitude=\"0\" accuracy=\"0\" context=\"0\"
+        media=\"photo\" media_status=\"ready\" />\n\t<photo id=\"27306449950\" owner=\"63360666@N04\"
+        secret=\"7259524764\" server=\"7415\" farm=\"8\" title=\"\" ispublic=\"1\"
+        isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576218\" lastupdate=\"1465576223\"
+        datetaken=\"2013-10-19 04:00:34\" datetakengranularity=\"0\" datetakenunknown=\"0\"
+        ownername=\"farenough\" iconserver=\"8442\" iconfarm=\"9\" views=\"0\" tags=\"old
+        house history abandoned home church rural photo florida decay explore forgotten
+        fl wander rurex\" machine_tags=\"\" latitude=\"0\" longitude=\"0\" accuracy=\"0\"
+        context=\"0\" media=\"photo\" media_status=\"ready\" />\n\t<photo id=\"26973632814\"
+        owner=\"63360666@N04\" secret=\"2d6c57e764\" server=\"7335\" farm=\"8\" title=\"\"
+        ispublic=\"1\" isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576218\"
+        lastupdate=\"1465576223\" datetaken=\"2013-11-04 05:40:11\" datetakengranularity=\"0\"
+        datetakenunknown=\"0\" ownername=\"farenough\" iconserver=\"8442\" iconfarm=\"9\"
+        views=\"0\" tags=\"old house history abandoned home church rural photo florida
+        decay explore forgotten fl wander rurex\" machine_tags=\"\" latitude=\"0\"
+        longitude=\"0\" accuracy=\"0\" context=\"0\" media=\"photo\" media_status=\"ready\"
+        />\n\t<photo id=\"27306445560\" owner=\"63360666@N04\" secret=\"cdedfee817\"
+        server=\"7099\" farm=\"8\" title=\"\" ispublic=\"1\" isfriend=\"0\" isfamily=\"0\"
+        license=\"0\" dateupload=\"1465576219\" lastupdate=\"1465576223\" datetaken=\"2013-10-19
+        03:59:06\" datetakengranularity=\"0\" datetakenunknown=\"0\" ownername=\"farenough\"
+        iconserver=\"8442\" iconfarm=\"9\" views=\"0\" tags=\"old house history abandoned
+        home church rural photo florida decay explore forgotten fl wander rurex\"
+        machine_tags=\"\" latitude=\"0\" longitude=\"0\" accuracy=\"0\" context=\"0\"
+        media=\"photo\" media_status=\"ready\" />\n\t<photo id=\"26973629164\" owner=\"63360666@N04\"
+        secret=\"3117daa8e6\" server=\"7713\" farm=\"8\" title=\"\" ispublic=\"1\"
+        isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576219\" lastupdate=\"1465576223\"
+        datetaken=\"2013-10-19 03:59:58\" datetakengranularity=\"0\" datetakenunknown=\"0\"
+        ownername=\"farenough\" iconserver=\"8442\" iconfarm=\"9\" views=\"0\" tags=\"old
+        house history abandoned home church rural photo florida decay explore forgotten
+        fl wander rurex\" machine_tags=\"\" latitude=\"0\" longitude=\"0\" accuracy=\"0\"
+        context=\"0\" media=\"photo\" media_status=\"ready\" />\n\t<photo id=\"27306441490\"
+        owner=\"63360666@N04\" secret=\"8b0c79cc62\" server=\"7461\" farm=\"8\" title=\"\"
+        ispublic=\"1\" isfriend=\"0\" isfamily=\"0\" license=\"0\" dateupload=\"1465576217\"
+        lastupdate=\"1465576223\" datetaken=\"2013-06-11 00:52:46\" datetakengranularity=\"0\"
+        datetakenunknown=\"0\" ownername=\"farenough\" iconserver=\"8442\" iconfarm=\"9\"
+        views=\"0\" tags=\"old house history abandoned home church rural photo florida
+        decay explore forgotten fl wander rurex\" machine_tags=\"\" latitude=\"0\"
+        longitude=\"0\" accuracy=\"0\" context=\"0\" media=\"photo\" media_status=\"ready\"
+        />\n\t<photo id=\"27510641381\" owner=\"27784972@N07\" secret=\"176a80fe38\"
+        server=\"7751\" farm=\"8\" title=\"Attractive House Finch\" ispublic=\"1\"
+        isfriend=\"0\" isfamily=\"0\" license=\"2\" o_width=\"3920\" o_height=\"3080\"
+        dateupload=\"1465575866\" lastupdate=\"1465576510\" datetaken=\"2016-06-09
+        13:57:00\" datetakengranularity=\"0\" datetakenunknown=\"0\" ownername=\"grandmasandy+chuck\"
+        iconserver=\"3668\" iconfarm=\"4\" views=\"0\" tags=\"bird house finch red\"
+        machine_tags=\"\" originalsecret=\"027cc47205\" originalformat=\"jpg\" latitude=\"0\"
+        longitude=\"0\" accuracy=\"0\" context=\"0\" media=\"photo\" media_status=\"ready\"
+        />\n\t<photo id=\"26973462954\" owner=\"134844034@N02\" secret=\"fa91307c3d\"
+        server=\"7301\" farm=\"8\" title=\"Hold the door\" ispublic=\"1\" isfriend=\"0\"
+        isfamily=\"0\" license=\"0\" dateupload=\"1465575607\" lastupdate=\"1465575943\"
+        datetaken=\"2016-06-07 18:04:16\" datetakengranularity=\"0\" datetakenunknown=\"0\"
+        ownername=\"paleod\" iconserver=\"493\" iconfarm=\"1\" views=\"3\" tags=\"street
+        door brown house art window\" machine_tags=\"\" originalsecret=\"dcf969dc26\"
+        originalformat=\"jpg\" latitude=\"0\" longitude=\"0\" accuracy=\"0\" context=\"0\"
+        media=\"photo\" media_status=\"ready\" />\n</photos>\n</rsp>\n"
+    http_version: 
+  recorded_at: Fri, 10 Jun 2016 16:41:39 GMT
+recorded_with: VCR 3.0.3
