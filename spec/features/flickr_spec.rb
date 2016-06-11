@@ -6,13 +6,11 @@ require 'vcr'
 require 'pp'
 
 describe "seaching photos in Flickr", vcr: true do
-  let!(:user) { create :user_with_one_block_without_cards }
-  let!(:card) { Card.create original_text: "house", translated_text: "дом",
-               user_id: user.id, block_id: user.blocks.first.id }
+  let!(:user) { create :user_with_one_block_and_one_card }
   before do
     visit root_path
     login "test@test.com", "12345", "Войти"
-    visit edit_card_path card
+    visit edit_card_path user.cards.first
   end
 
   it "edit card searching and connecting photos from Flickr" do
@@ -27,8 +25,8 @@ describe "seaching photos in Flickr", vcr: true do
 end
 
 describe "create card with Flickr photos connected" do
+  let!(:user) { create :user_with_one_block_without_cards }
   before do
-    user = create :user_with_one_block_without_cards
     visit root_path
     login "test@test.com", "12345", "Войти"
     visit new_card_path
