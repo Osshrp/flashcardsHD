@@ -15,7 +15,7 @@ jQuery(function($)	{
        var elem = document.getElementById('card_photo_search_string').value;
        var card_id = document.getElementById('card_id').value;
        $.ajax({
-        method: 'PATCH',
+        method: 'POST',
         url: '/search-photo',
         data: { card: { photo: { search_string: elem } } }
       })
