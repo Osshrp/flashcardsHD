@@ -1,2 +1,2 @@
 <%= render partial: '/dashboard/cards/flickr_widget',
-locals: { photos: FlickrPhoto.render(params[:card][:photo][:search_string]) } %>
+locals: { photos: FlickrPhoto.render(params[:card][:photo][:search_string]).in_groups_of(2) } %>

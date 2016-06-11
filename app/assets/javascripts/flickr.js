@@ -17,7 +17,7 @@ jQuery(function($)	{
        $.ajax({
         method: 'PATCH',
         url: '/search-photo',
-        data: { card: { id: card_id, photo: { search_string: elem } } }
+        data: { card: { photo: { search_string: elem } } }
       })
       .done(function( data ) {
         $('#flickr-photo').html(data);
