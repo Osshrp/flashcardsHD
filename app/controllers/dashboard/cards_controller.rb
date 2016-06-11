@@ -16,7 +16,7 @@ class Dashboard::CardsController < Dashboard::BaseController
   def create
     @card = current_user.cards.build(card_params)
     if @card.save
-      @card.update(card_params.except!(:id))
+      @card.update(remote_image_url: card_params[:remote_image_url])
       redirect_to cards_path
     else
       respond_with @card
