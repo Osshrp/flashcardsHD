@@ -46,10 +46,6 @@ class Dashboard::CardsController < Dashboard::BaseController
     @card = current_user.cards.find(params[:id])
   end
 
-  def set_remote_image_url
-    @card.remote_image_url = params[:remote_image_url]
-  end
-
   def card_params
     params.require(:card).permit(:original_text, :translated_text, :review_date,
                                  :image, :image_cache, :remove_image, :block_id,
