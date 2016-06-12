@@ -1,6 +1,6 @@
 class Dashboard::CardsController < Dashboard::BaseController
   before_action :set_card, only: [:destroy, :edit, :update]
-  respond_to :html
+  respond_to :html, :json
 
   def index
     @cards = current_user.cards.all.order('review_date')
@@ -16,6 +16,7 @@ class Dashboard::CardsController < Dashboard::BaseController
   def create
     @card = current_user.cards.build(card_params)
     if @card.save
+      @card.update(remote_image_url: card_params[:remote_image_url])
       redirect_to cards_path
     else
       respond_with @card
@@ -35,6 +36,10 @@ class Dashboard::CardsController < Dashboard::BaseController
     respond_with @card
   end
 
+  def search_photo
+    render layout: false
+  end
+
   private
 
   def set_card
@@ -43,6 +48,7 @@ class Dashboard::CardsController < Dashboard::BaseController
 
   def card_params
     params.require(:card).permit(:original_text, :translated_text, :review_date,
-                                 :image, :image_cache, :remove_image, :block_id)
+                                 :image, :image_cache, :remove_image, :block_id,
+                                 :search_string, :id, :remote_image_url, :photo)
   end
 end

@@ -13,7 +13,29 @@
   <div class="form-group">
     <%= f.input :image, as: :file, label: t(:image_label) %>
     <%= f.input :image_cache, as: :hidden %>
+    <%= f.input :id, as: :hidden %>
   </div>
+
+  <%= f.simple_fields_for :photo do |photo_form| %>
+    <div class="form-group">
+      <%= link_to 'Загрузить фото с Flickr', '#',
+        class: 'btn btn-default', id: 'show_div' %>
+      <div id="hidden" class="form-group">
+        <%= photo_form.text_field :search_string, :value => params[:search_string] %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= photo_form.submit 'Искать фото', formaction: search_photo_path,
+        class: 'btn btn-default', id: 'search_btn' %>
+        
+    </div>
+  <% end %>
+
+  <div id="flickr-photo">
+  </div>
+
+  <%= f.input :remote_image_url, as: :hidden %>
 
   <div class="form-group">
     <%= f.input :block_id, collection: current_user.blocks.all.order('title'),
@@ -21,9 +43,11 @@
                       input_html: { class: 'form-control', required: true } %>
   </div>
 
+  <p>
+  </p>
   <% if card.image? %>
     <div class="form-group">
-      <%= f.input :remove_image, as: :boolean, label: t(:delet_image) %>
+      <%= f.input :remove_image, as: :boolean, label: t(:delete_image) %>
       <div class="row">
         <div class="col-xs-6 col-md-4 card_image">
           <p class="thumbnail">

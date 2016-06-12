@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -24,5 +23,12 @@ module Flashcards
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru, :en]
     config.active_record.raise_in_transactional_callbacks = true
+
+    if Rails.env.test?
+      VCR.configure do |config|
+        config.cassette_library_dir = "spec/cassettes"
+        config.hook_into :webmock
+      end
+    end
   end
 end

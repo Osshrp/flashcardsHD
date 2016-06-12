@@ -1,0 +1,13 @@
+<div class="flickr">
+  <ul>
+    <% photos.each.with_index do |row, row_index| -%>
+      <li>
+        <% row.each.with_index do |photo, index| %>
+          <%= link_to(image_tag(photo.url(:small), :class => 'flickr_photo',
+            			   :title => photo.title, :border => 0),
+                     "#", :id => "photo_#{ row_index}_#{index}")  %>
+        <% end %>
+      </li>
+    <% end -%>
+  </ul>
+</div>

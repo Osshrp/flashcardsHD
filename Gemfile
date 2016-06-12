@@ -27,6 +27,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'flickr_fu'
 gem 'fog-aws'
 gem 'rails_12factor', group: :production
 gem 'levenshtein'
@@ -41,4 +42,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'pry'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'byebug'
 end

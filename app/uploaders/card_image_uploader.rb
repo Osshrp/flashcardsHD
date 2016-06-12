@@ -17,4 +17,8 @@ class CardImageUploader < CarrierWave::Uploader::Base
   def filename
     "#{model.id}.#{file.extension.downcase}" if original_filename
   end
+
+  def default_url
+    "default.jpg"
+  end
 end
