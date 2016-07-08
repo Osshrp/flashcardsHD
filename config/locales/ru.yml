@@ -32,6 +32,7 @@ ru:
   deck_name_label: 'Название'
   all_cards_label: 'Все карточки'
   add_card_label: 'Добавить карточку'
+  add_remote_cards_label: 'Добавить карточки с внешнего url'
   edit_card_label: 'Редактировать карточку'
   user_profile_label: 'Профиль пользователя'
   profile_label: 'Профиль'

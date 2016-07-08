@@ -40,6 +40,18 @@ class Dashboard::CardsController < Dashboard::BaseController
     render layout: false
   end
 
+  def remote
+    render
+  end
+
+  def remote_create
+    if RemoteCards.request
+      redirect_to cards_path
+    else
+      render
+    end
+  end
+
   private
 
   def set_card
@@ -50,5 +62,9 @@ class Dashboard::CardsController < Dashboard::BaseController
     params.require(:card).permit(:original_text, :translated_text, :review_date,
                                  :image, :image_cache, :remove_image, :block_id,
                                  :search_string, :id, :remote_image_url, :photo)
+  end
+
+  def remote_params
+    params.require
   end
 end

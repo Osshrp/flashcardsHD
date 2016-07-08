@@ -31,6 +31,7 @@ en:
   deck_name_label: 'Name'
   all_cards_label: 'All cards'
   add_card_label: 'Add card'
+  add_remote_cards_label: 'Add cards from remote url'
   delete_deck_confirmation_label: 'Delete deck?'
   edit_card_label: 'Edit card'
   user_profile_label: 'User profile'
