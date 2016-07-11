@@ -1,22 +1,22 @@
-<%= form_tag 'remote_create' do %>
+<%= form_tag "remote_create" do %>
   <div class="form-group">
-    <%= label_tag :remote_url, 'Внешний url:' %>
-    <%= text_field_tag 'remote_url', '', class: 'form-control'  %>
+    <%= label_tag :remote_url, t(:remote_url_label) %>
+    <%= text_field_tag "remote_url", "", class: "form-control"  %>
   </div>
   <div class="form-group">
-    <%= label_tag :row_selector, 'Селектор строки:' %>
-    <%= text_field_tag 'row_selector', '', class: 'form-control' %>
+    <%= label_tag :row_selector, t(:row_selector_label) %>
+    <%= text_field_tag "row_selector", "", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag :original_selector, 'Селектор оригинального слова:' %>
-    <%= text_field_tag 'original_selector', '', class: 'form-control' %>
+    <%= label_tag :original_selector, t(:original_selector_label) %>
+    <%= text_field_tag "original_selector", "", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag :translate_selector, 'Селектор перевода:' %>
-    <%= text_field_tag 'translate_selector', '', class: 'form-control' %>
+    <%= label_tag :translate_selector, t(:translate_selector_label) %>
+    <%= text_field_tag "translate_selector", "", class: "form-control" %>
   </div>
 
   <div class="form-group">
   </div>
-  <%= submit_tag('Загрузить', class: 'btn btn-default') %>
+  <%= submit_tag(t(:load), class: "btn btn-default") %>
 <% end %>

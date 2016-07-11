@@ -5,7 +5,7 @@ class CardsMailer < ActionMailer::Base
     mail(to: email, subject: t(:review_date_came_notice))
   end
 
-  def notify (email = 'oss@bobrptd.ru')
+  def notify(email = 'oss@bobrptd.ru')
     mail(to: email, subject: "Request")
   end
 end
