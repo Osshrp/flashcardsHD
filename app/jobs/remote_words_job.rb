@@ -1,6 +1,7 @@
-class RemoteCards
+class RemoteWordsJob < ActiveJob::Base
+  queue_as :default
 
-  def self.request(params, user)
+  def perform(params, user)
     require 'nokogiri'
     # require 'open-uri'
     page = Nokogiri::HTML(open(params[:remote_url]))

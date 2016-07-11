@@ -45,7 +45,7 @@ class Dashboard::CardsController < Dashboard::BaseController
   end
 
   def remote_create
-    if RemoteCards.request
+    if RemoteWordsJob.perform_now(remote_params, current_user)
       redirect_to cards_path
     else
       render
@@ -65,6 +65,6 @@ class Dashboard::CardsController < Dashboard::BaseController
   end
 
   def remote_params
-    params.require
+    params.permit :remote_url, :row_selector, :original_selector, :translate_selector
   end
 end
