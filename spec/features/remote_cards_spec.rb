@@ -7,7 +7,7 @@ feature "User loads words from remote url" do
   let!(:user) { create :user_with_one_block_and_one_card }
   before do
     visit root_path
-    login "test@test.com", "12345", "Войти"
+    login user.email, "12345", "Войти"
   end
 
   scenario "they whant to load card" do
