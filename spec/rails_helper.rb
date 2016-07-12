@@ -56,7 +56,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     stub_request(:get, /wordsteps.com/).
-      with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+      with(headers: { 'Accept' => '*/*', 'User-Agent' => 'Ruby' }).
       to_return(status: 200, body: "<head><meta charset='utf-8'></head>
         <tr class='wrow'><div class='word'>remuneration</div>
         <div class='trans'>вознаграждение</div></tr>", headers: {})
