@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
     resources :cards
     match "search-photo", to: "cards#search_photo", via: [:patch, :post]
-    get "remote" => "cards#remote"
+    get "remote_cards" => "cards#remote"
     post "remote_create" => "cards#remote_create"
 
     resources :blocks do
@@ -31,8 +31,6 @@ Rails.application.routes.draw do
         put "reset_as_current"
       end
     end
-
-    # get "remote_cards" => "remote_cards#new"
 
     put "review_card" => "trainer#review_card"
     get "trainer" => "trainer#index"

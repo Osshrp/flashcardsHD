@@ -4,11 +4,11 @@ class RequestCards
   class << self
     def request(params, user)
       if user.blocks.empty?
-        block = user.blocks.create(title: "Block for cards from remote url")
+        user.blocks.create(title: "Block for cards from remote url")
       end
       page = Nokogiri::HTML(open(params[:remote_url]))
       if send_request(params, user, page)
-        CardsMailer.notify(user.email).deliver_now
+        CardsMailer.notify(user.email).deliver_later
       end
     end
 
