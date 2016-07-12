@@ -1,7 +1,7 @@
 require "rails_helper"
 require "support/helpers/login_helper.rb"
 include LoginHelper
-require 'vcr'
+require "vcr"
 
 feature "User loads words from remote url" do
   let!(:user) { create :user_with_one_block_and_one_card }
@@ -36,8 +36,8 @@ feature "User loads words from remote url" do
     fill_in "row_selector", with: ".wrow"
     fill_in "original_selector", with: ".word"
     fill_in "translate_selector", with: ".trans"
-    
-    VCR.use_cassette 'remote_cards', match_requests_on: [:host] do
+
+    VCR.use_cassette "remote_cards", match_requests_on: [:host] do
       click_button "Загрузить"
     end
     visit cards_path
