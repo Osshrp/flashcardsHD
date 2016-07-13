@@ -6,11 +6,10 @@ class Card < ActiveRecord::Base
   validates :user_id, presence: true
   before_validation :set_review_date_as_now, on: :create
   validate :texts_are_not_equal
-  validates :original_text, :translated_text, :review_date,
-            presence: true
+  validates :original_text, presence: true
+  validates :translated_text, :review_date, presence: true
   validates :user_id, presence: true
-  validates :block_id,
-            presence: true
+  validates :block_id, presence: true
   validates :interval, :repeat, :efactor, :quality, :attempt, presence: true
 
   mount_uploader :image, CardImageUploader
@@ -39,7 +38,7 @@ class Card < ActiveRecord::Base
     users = User.where.not(email: nil)
     users.each do |user|
       if user.cards.pending.any?
-        CardsMailer.pending_cards_notification(user.email).deliver
+        CardsMailer.pending_cards_notification(user.email).deliver_later
       end
     end
   end

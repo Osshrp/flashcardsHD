@@ -23,11 +23,16 @@ module Flashcards
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru, :en]
     config.active_record.raise_in_transactional_callbacks = true
+    config.active_job.queue_adapter = :sidekiq
 
     if Rails.env.test?
       VCR.configure do |config|
         config.cassette_library_dir = "spec/cassettes"
         config.hook_into :webmock
+        # config.preserve_exact_body_bytes do |http_message|
+        #   http_message.body.encoding.name == 'ASCII-8BIT' ||
+        #   !http_message.body.valid_encoding?
+        # end
       end
     end
   end

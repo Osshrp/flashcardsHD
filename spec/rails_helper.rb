@@ -53,4 +53,12 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  config.before(:each) do
+    stub_request(:get, /wordsteps.com/).
+      with(headers: { 'Accept' => '*/*', 'User-Agent' => 'Ruby' }).
+      to_return(status: 200, body: "<head><meta charset='utf-8'></head>
+        <tr class='wrow'><div class='word'>remuneration</div>
+        <div class='trans'>вознаграждение</div></tr>", headers: {})
+  end
 end

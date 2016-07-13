@@ -31,6 +31,7 @@ en:
   deck_name_label: 'Name'
   all_cards_label: 'All cards'
   add_card_label: 'Add card'
+  add_remote_cards_label: 'Add cards from remote url'
   delete_deck_confirmation_label: 'Delete deck?'
   edit_card_label: 'Edit card'
   user_profile_label: 'User profile'
@@ -56,6 +57,11 @@ en:
   log_out_failed_provider_alert: "Log out of your account %{provider} failed."
   please_log_in: 'Please log in.'
   go_to_site: 'Go to site to view cards'
+  remote_url_label: "Remote url:"
+  row_selector_label: "Row selector:"
+  original_selector_label: "Original word selector:"
+  translate_selector_label: "Translate selector"
+  load: "Load"
 
   activerecord:
       errors:

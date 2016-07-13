@@ -37,6 +37,7 @@ gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
 gem 'responders', '~> 2.0'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'rspec-rails'
