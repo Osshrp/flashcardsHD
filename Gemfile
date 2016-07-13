@@ -38,6 +38,7 @@ gem 'rollbar'
 gem 'newrelic_rpm'
 gem 'responders', '~> 2.0'
 gem 'sidekiq'
+gem 'redis-rails'
 
 group :development, :test do
   gem 'rspec-rails'
