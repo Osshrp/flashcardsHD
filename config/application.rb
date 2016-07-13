@@ -24,7 +24,7 @@ module Flashcards
     config.i18n.available_locales = [:ru, :en]
     config.active_record.raise_in_transactional_callbacks = true
     config.active_job.queue_adapter = :sidekiq
-    
+
     config.cache_store = :redis_store
 
     if Rails.env.test?
