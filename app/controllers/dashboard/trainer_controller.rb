@@ -12,6 +12,7 @@ class Dashboard::TrainerController < Dashboard::BaseController
     if check_result[:state]
       if check_result[:distance] == 0
         flash[:notice] = t(:correct_translation_notice)
+        ahoy.track "User commited card review", user: current_user.email
       else
         flash[:alert] = t 'translation_from_misprint_alert',
                           user_translation: trainer_params[:user_translation],
