@@ -90,6 +90,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    chartkick (2.0.0)
     chronic (0.10.2)
     coderay (1.1.1)
     coffee-rails (4.0.1)
@@ -361,6 +362,7 @@ DEPENDENCIES
   byebug
   capybara
   carrierwave
+  chartkick
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   faraday

@@ -20,6 +20,7 @@ jQuery(function($)	{
         data: { card: { photo: { search_string: elem } } }
       })
       .done(function( data ) {
+        ahoy.track("images loaded from flickr");
         $('#flickr-photo').html(data);
       });
     });

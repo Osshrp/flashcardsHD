@@ -55,6 +55,6 @@ class ApplicationController < ActionController::Base
   end
 
   def track_page_visits
-    ahoy.track "User visit page", url: request.env['PATH_INFO']
+    ahoy.track "Processed #{controller_name}##{action_name}", request.filtered_parameters
   end
 end

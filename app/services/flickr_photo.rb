@@ -5,7 +5,6 @@ class FlickrPhoto
     flickr = Flickr.new(init_hash)
     Rails.cache.fetch("flickr_photo#{search_string}", expires_in: 6.hours) do
       flickr.photos.search(tags: search_string, per_page: photo_count)
-      ahoy.track "User loaded images from Flickr", user: current_user.email
     end
   end
 end
