@@ -11,6 +11,6 @@ feature "User create events" do
 
   scenario "they whant to log user visit" do
     visit cards_path
-    expect( Ahoy::Event.where(name: "Processed cards#index").count ).to eq(1)
+    expect(Ahoy::Event.where(name: "Processed cards#index").count).to eq(1)
   end
 end
