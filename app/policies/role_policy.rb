@@ -1,6 +1,5 @@
 class RolePolicy < ApplicationPolicy
 
-
   def index?
     admin?
   end
@@ -24,5 +23,4 @@ class RolePolicy < ApplicationPolicy
   def destroy?
     admin?
   end
-
 end
