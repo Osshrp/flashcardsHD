@@ -41,6 +41,7 @@ gem 'sidekiq'
 gem 'redis-rails'
 gem 'ahoy_matey'
 gem 'chartkick'
+gem 'groupdate'
 
 group :development, :test do
   gem 'rspec-rails'
