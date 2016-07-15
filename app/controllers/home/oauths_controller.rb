@@ -33,8 +33,7 @@ class Home::OauthsController < Home::BaseController
   end
 
   def track_provider
-    ahoy.track "remote_sing_in",
-               user: @user.email, provider: provider
+    ahoy.track "remote_sing_in:#{@user.email}"
   end
 
   def to_trainer_path

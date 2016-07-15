@@ -17,7 +17,7 @@ class Dashboard::CardsController < Dashboard::BaseController
     @card = current_user.cards.build(card_params)
     if @card.save
       @card.update(remote_image_url: card_params[:remote_image_url])
-      ahoy.track "card", card: :created
+      ahoy.track "card:created"
       redirect_to cards_path
     else
       respond_with @card
@@ -47,7 +47,7 @@ class Dashboard::CardsController < Dashboard::BaseController
 
   def remote_create
     if RemoteWordsJob.perform_now(remote_params, current_user)
-      ahoy.track "remote_cards", cards: :created
+      ahoy.track "remote_cards:created"
       redirect_to cards_path
     end
   end

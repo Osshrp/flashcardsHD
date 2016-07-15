@@ -12,7 +12,7 @@ class Dashboard::TrainerController < Dashboard::BaseController
     if check_result[:state]
       if check_result[:distance] == 0
         flash[:notice] = t(:correct_translation_notice)
-        ahoy.track "card", card: :success_review
+        ahoy.track "card:success_review"
       else
         flash[:alert] = t 'translation_from_misprint_alert',
                           user_translation: trainer_params[:user_translation],
@@ -22,7 +22,7 @@ class Dashboard::TrainerController < Dashboard::BaseController
       redirect_to trainer_path
     else
       flash[:alert] = t(:incorrect_translation_alert)
-      ahoy.track "card", card: :fail_review
+      ahoy.track "card:fail_review"
       redirect_to trainer_path(id: @card.id)
     end
   end
