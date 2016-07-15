@@ -1,6 +1,6 @@
 # FlashcardsHD
-[![Buil Status](https://travis-ci.org/Osshrp/flashcardsHD.png)]
-[![Code climate](https://codeclimate.com/github/Osshrp/flashcardsHD.png)]
+[![Buil Status](https://travis-ci.org/Osshrp/flashcardsHD.png)](https://travis-ci.org/Osshrp/flashcardsHD)
+[![Code climate](https://codeclimate.com/github/Osshrp/flashcardsHD.png)](https://codeclimate.com/github/Osshrp/flashcardsHD)
 
 ## Vagrant
 
