@@ -54,6 +54,6 @@ class ApplicationController < ActionController::Base
   end
 
   def track_page_visits
-    ahoy.track "Processed #{controller_name}##{action_name}", request.filtered_parameters
+    ahoy.track "Processed_#{controller_name}##{action_name}", request.filtered_parameters
   end
 end
