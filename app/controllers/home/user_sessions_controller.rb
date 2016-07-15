@@ -8,7 +8,7 @@ class Home::UserSessionsController < Home::BaseController
   end
 
   def create
-    if @user == login(params[:email], params[:password])
+    if @user = login(params[:email], params[:password])
       ahoy.authenticate(@user)
       ahoy.track "User sign in", user: @user.email
       redirect_back_or_to root_path, notice: t(:log_in_is_successful_notice)

@@ -1,3 +1,8 @@
+= FlashcardsHD
+{<img src="https://travis-ci.org/Osshrp/flashcardsHD?branch=master" alt="Build Status" />}[https://travis-ci.org/Osshrp/flashcardsHD]
+{<img src="https://codeclimate.com/github/Osshrp/flashcardsHD/badges/gpa.svg" />}[https://codeclimate.com/github/Osshrp/flashcardsHD]
+
+
 ## Vagrant
 
     vagrant up
