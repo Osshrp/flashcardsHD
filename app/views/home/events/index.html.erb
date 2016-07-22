@@ -1,0 +1,4 @@
+<h2>Users:</h2>
+<%= line_chart User.group_by_day(:created_at).count %>
+<h2>Visits pages:</h2>
+<%= pie_chart Ahoy::Event.where("name LIKE ?", "Processed%").group(:properties).count %>

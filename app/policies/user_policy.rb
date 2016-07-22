@@ -1,4 +1,5 @@
 class UserPolicy < ApplicationPolicy
+
   def index?
     admin?
   end
@@ -19,7 +20,7 @@ class UserPolicy < ApplicationPolicy
     update?
   end
 
-	def destroy?
+  def destroy?
     admin?
   end
 end

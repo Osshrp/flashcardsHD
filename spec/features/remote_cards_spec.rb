@@ -1,7 +1,6 @@
 require "rails_helper"
 require "support/helpers/login_helper.rb"
 include LoginHelper
-# require "vcr"
 
 feature "User loads words from remote url" do
   let!(:user) { create :user_with_one_block_and_one_card }
